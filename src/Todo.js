@@ -2,11 +2,13 @@ import './Todo.css'
 import { useState } from 'react'
 import List from './components/List'
 import TodoForm from './components/TodoForm'
+import Item from './class/Item'
 
 function Todo() {
   const [items, setItems] = useState([])
 
-  function onAddItem(item) {
+  function onAddItem(text) {
+    const item = new Item(text)
     setItems([...items, item])
   }
 
@@ -18,7 +20,5 @@ function Todo() {
     </div>
   )
 }
-
-
 
 export default Todo
