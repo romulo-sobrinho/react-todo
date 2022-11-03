@@ -12,11 +12,26 @@ function Todo() {
     setItems([...items, item])
   }
 
+  function onDeletedItem(item) {
+    let filteredItems = items.filter(element => element.id !== item.id)
+    setItems(filteredItems)
+  }
+
+  function onDone(item) {
+    let updatedItems = items.map(element => {
+      if(element.id === item.id) {
+        element.done = !element.done
+      }
+      return element
+    })
+    setItems(updatedItems)
+  }
+
   return (
     <div className="container">
       <h1>To Do</h1>
       <TodoForm onAddItem={onAddItem}></TodoForm>
-      <List items={items}></List>
+      <List onDone={onDone} onDeletedItem={onDeletedItem} items={items}></List>
     </div>
   )
 }
