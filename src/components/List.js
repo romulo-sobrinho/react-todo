@@ -1,3 +1,5 @@
+import Card from "./Card"
+
 function DoneIcon(props) {
     if(props.done) {
       return (
@@ -14,10 +16,14 @@ function List(props) {
 
   return (
     <ul>
-      {props.items.map(item => <li className={item.done? "done" : ""} key={item.id}>
-          {item.text}
-          <button onClick={() => { props.onDone(item)}}><DoneIcon done={item.done} ></DoneIcon></button>
-          <button onClick={() => { props.onDeletedItem(item)}} ><i className="bi bi-trash"></i></button>
+      {props.items.map(item => <li key={item.id}>
+          <Card className={item.done? "done item" : "item"}>
+            {item.text}
+            <div>
+              <button onClick={() => { props.onDone(item)}}><DoneIcon done={item.done} ></DoneIcon></button>
+              <button onClick={() => { props.onDeletedItem(item)}} ><i className="bi bi-trash"></i></button>
+            </div>
+          </Card>
         </li>)}
     </ul>
   )
