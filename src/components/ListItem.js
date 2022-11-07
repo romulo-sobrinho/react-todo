@@ -3,11 +3,11 @@ import Card from "./Card"
 function DoneIcon(props) {
     if(props.done) {
       return (
-        <i class="bi bi-check-square-fill"></i>
+        <i className="bi bi-check-square-fill"></i>
       )
     } else {
       return (
-        <i class="bi bi-check-square"></i>
+        <i className="bi bi-check-square"></i>
       )
     }
 }
