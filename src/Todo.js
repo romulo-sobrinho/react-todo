@@ -53,7 +53,7 @@ function Todo() {
     <div className="container">
       
       <header className="header">
-        <h1>To Do</h1>
+        <h1>Lista de Tarefas - REACT</h1>
         <button onClick={() => {setShowModal(true)}} className="addButton"><i className="bi bi-plus-lg"></i></button>
       </header>
       <List onDone={onDone} onDeletedItem={onDeletedItem} items={items}></List>

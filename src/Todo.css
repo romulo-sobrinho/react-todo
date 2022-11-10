@@ -1,6 +1,7 @@
 .container {
   margin: 0 auto;
   max-width: 600px;
+  padding: 2rem;
 }
 
 .done {
@@ -35,6 +36,7 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .addButton {
