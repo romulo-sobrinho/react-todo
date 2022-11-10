@@ -12,7 +12,7 @@
 
 ## Objetivo
 <p align="center">
-  Aplicação de lista de tarefas, famosa To Do List - com React. Implementado com gerenciamento de estado utilizando Context API para passar o estado entre componentes react.
+  Aplicação de lista de tarefas, famosa To Do List - com React. Implementado com Hooks
 </p>
 
 
